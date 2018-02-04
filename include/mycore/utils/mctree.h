@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2015-2016 Alexander Borisov
+ Copyright (C) 2015-2017 Alexander Borisov
  
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -18,20 +18,20 @@
  Author: lex.borisov@gmail.com (Alexander Borisov)
 */
 
-#ifndef MyHTML_UTILS_MCTREE_H
-#define MyHTML_UTILS_MCTREE_H
+#ifndef MyCORE_UTILS_MCTREE_H
+#define MyCORE_UTILS_MCTREE_H
 #pragma once
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include <myhtml/myosi.h>
-#include <myhtml/utils.h>
+#include <mycore/myosi.h>
+#include <mycore/utils.h>
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <memory.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #define mctree_node_get_free_id(mctree) mctree->nodes_length
 
@@ -45,15 +45,15 @@ extern "C" {
 
 #define mctree_node_add(mctree)                                     \
     mctree->nodes_length++;                                         \
-    if(mctree->nodes_length == mctree->nodes_size) {                \
-        mctree->nodes_size += 4096;                                 \
-        mctree->nodes = (mctree_node_t*)myhtml_realloc(mctree->nodes,    \
+    if(mctree->nodes_length >= mctree->nodes_size) {                \
+        mctree->nodes_size = mctree->nodes_length + 4096;           \
+        mctree->nodes = (mctree_node_t*)mycore_realloc(mctree->nodes,    \
             sizeof(mctree_node_t) * mctree->nodes_size);            \
     }                                                               \
     mctree_node_clean(mctree, mctree->nodes_length)
 
 #define mctree_make_first_idx(mctree, key, size) \
-    ((myhtml_string_chars_lowercase_map[ (const unsigned char)(key[0]) ] + myhtml_string_chars_lowercase_map[ (const unsigned char)(key[size - 1]) ]) % mctree->start_size) + 1
+    ((mycore_string_chars_lowercase_map[ (const unsigned char)(key[0]) ] + mycore_string_chars_lowercase_map[ (const unsigned char)(key[size - 1]) ]) % mctree->start_size) + 1
 
 
 typedef size_t mctree_index_t;

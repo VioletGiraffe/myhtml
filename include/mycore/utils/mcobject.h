@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2015-2016 Alexander Borisov
+ Copyright (C) 2015-2017 Alexander Borisov
  
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -18,15 +18,15 @@
  Author: lex.borisov@gmail.com (Alexander Borisov)
 */
 
-#ifndef MyHTML_UTILS_MCOBJECT_H
-#define MyHTML_UTILS_MCOBJECT_H
+#ifndef MyCORE_UTILS_MCOBJECT_H
+#define MyCORE_UTILS_MCOBJECT_H
 #pragma once
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#include <myhtml/myosi.h>
+#include <mycore/myosi.h>
 
 struct mcobject_chunk {
     unsigned char *begin;
@@ -52,19 +52,19 @@ typedef mcobject_t;
 
 
 mcobject_t * mcobject_create(void);
-myhtml_status_t mcobject_init(mcobject_t *mcobject, size_t chunk_size, size_t struct_size);
+mystatus_t mcobject_init(mcobject_t *mcobject, size_t chunk_size, size_t struct_size);
 void mcobject_clean(mcobject_t *mcobject);
 mcobject_t * mcobject_destroy(mcobject_t *mcobject, bool destroy_self);
 
-void mcobject_chunk_malloc(mcobject_t* mcobject, myhtml_status_t* status);
+void mcobject_chunk_malloc(mcobject_t* mcobject, mystatus_t* status);
 
-void * mcobject_malloc(mcobject_t *mcobject, myhtml_status_t* status);
-myhtml_status_t mcobject_free(mcobject_t *mcobject, void *entry);
+void * mcobject_malloc(mcobject_t *mcobject, mystatus_t* status);
+mystatus_t mcobject_free(mcobject_t *mcobject, void *entry);
 
 
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
 
-#endif /* MyHTML_UTILS_MCOBJECT_H */
+#endif /* MyCORE_UTILS_MCOBJECT_H */
 

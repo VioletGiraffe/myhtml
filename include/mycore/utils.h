@@ -18,39 +18,33 @@
  Author: lex.borisov@gmail.com (Alexander Borisov)
 */
 
-#ifndef MyHTML_CHAREF_H
-#define MyHTML_CHAREF_H
+#ifndef MyCORE_UTILS_H
+#define MyCORE_UTILS_H
 #pragma once
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-    
-#include <myhtml/myosi.h>
 
-struct charef_entry {
-    unsigned char ch;
-    size_t next;
-    size_t cur_pos;
-    size_t codepoints[2];
-    size_t codepoints_len;
-}
-typedef charef_entry_t;
+#include <mycore/myosi.h>
 
-struct charef_entry_result {
-    const charef_entry_t *curr_entry;
-    const charef_entry_t *last_entry;
-    size_t last_offset;
-    int is_done;
-}
-typedef charef_entry_result_t;
+#define mycore_utils_whithspace(onechar, action, logic)     \
+    (onechar action ' '  logic                              \
+     onechar action '\t' logic                              \
+     onechar action '\n' logic                              \
+     onechar action '\f' logic                              \
+     onechar action '\r')
 
-const charef_entry_t * myhtml_charef_find(const char *begin, size_t *offset, size_t size, size_t *data_size);
-const charef_entry_t * myhtml_charef_find_by_pos(size_t pos, const char *begin, size_t *offset, size_t size, charef_entry_result_t *result);
-const charef_entry_t * myhtml_charef_get_first_position(const char begin);
+size_t mycore_power(size_t t, size_t k);
+size_t mycore_strncasecmp(const char* str1, const char* str2, size_t size);
+size_t mycore_strcasecmp(const char* str1, const char* str2);
+size_t mycore_strncmp(const char* str1, const char* str2, size_t size);
+size_t mycore_strcmp(const char* str1, const char* str2);
+size_t mycore_strcmp_ws(const char* str1, const char* str2);
+bool mycore_ustrcasecmp_without_checks_by_secondary(const unsigned char* ustr1, const unsigned char* ustr2);
 
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
 
-#endif /* charef_h */
+#endif /* utils_h */

@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2015-2016 Alexander Borisov
+ Copyright (C) 2015-2017 Alexander Borisov
  
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -18,16 +18,16 @@
  Author: lex.borisov@gmail.com (Alexander Borisov)
 */
 
-#ifndef MyHTML_UTILS_MCOBJECT_ASYNC_H
-#define MyHTML_UTILS_MCOBJECT_ASYNC_H
+#ifndef MyCORE_UTILS_MCOBJECT_ASYNC_H
+#define MyCORE_UTILS_MCOBJECT_ASYNC_H
 #pragma once
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#include <myhtml/myosi.h>
-#include <myhtml/utils/mcsync.h>
+#include <mycore/myosi.h>
+#include <mycore/utils/mcsync.h>
 
 enum mcobject_async_status {
     MCOBJECT_ASYNC_STATUS_OK                                  = 0,

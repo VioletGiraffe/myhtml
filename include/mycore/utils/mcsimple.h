@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2015-2016 Alexander Borisov
+ Copyright (C) 2015-2017 Alexander Borisov
  
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -18,15 +18,15 @@
  Author: lex.borisov@gmail.com (Alexander Borisov)
 */
 
-#ifndef MyHTML_UTILS_MCSIMPLE_H
-#define MyHTML_UTILS_MCSIMPLE_H
+#ifndef MyCORE_UTILS_MCSIMPLE_H
+#define MyCORE_UTILS_MCSIMPLE_H
 #pragma once
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#include <myhtml/myosi.h>
+#include <mycore/myosi.h>
 
 struct mcsimple {
     size_t  struct_size;
@@ -57,5 +57,5 @@ void * mcsimple_get_by_absolute_position(mcsimple_t *mcsimple, size_t pos);
 } /* extern "C" */
 #endif
 
-#endif /* MyHTML_UTILS_MCSIMPLE_H */
+#endif /* MyCORE_UTILS_MCSIMPLE_H */
 

@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2015-2016 Alexander Borisov
+ Copyright (C) 2015-2017 Alexander Borisov
  
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -18,31 +18,32 @@
  Author: lex.borisov@gmail.com (Alexander Borisov)
 */
 
-#ifndef MyHTML_UTILS_H
-#define MyHTML_UTILS_H
+#ifndef MyCORE_PERF_H
+#define MyCORE_PERF_H
 #pragma once
+
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#include <myhtml/myosi.h>
+#include <mycore/myosi.h>
 
-#define myhtml_utils_whithspace(onechar, action, logic)     \
-    (onechar action ' '  logic                              \
-     onechar action '\t' logic                              \
-     onechar action '\n' logic                              \
-     onechar action '\f' logic                              \
-     onechar action '\r')
+#ifdef MyCORE_WITH_PERF
+void * mycore_perf_create(void);
+void mycore_perf_clean(void* perf);
+void mycore_perf_destroy(void* perf);
 
-size_t myhtml_strncasecmp(const char* str1, const char* str2, size_t size);
-size_t myhtml_strcasecmp(const char* str1, const char* str2);
-size_t myhtml_strncmp(const char* str1, const char* str2, size_t size);
-size_t myhtml_strcmp(const char* str1, const char* str2);
-size_t myhtml_strcmp_ws(const char* str1, const char* str2);
+mycore_status_t myhtml_perf_begin(void* perf);
+mycore_status_t myhtml_perf_end(void* perf);
+double myhtml_perf_in_sec(void* perf);
+
+unsigned long long mycore_perf_clock(void);
+unsigned long long mycore_perf_frequency(void);
+#endif /* MyCORE_WITH_PERF */
 
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
 
-#endif /* utils_h */
+#endif /* MyCORE_PERF_H */

@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2015-2016 Alexander Borisov
+ Copyright (C) 2015-2017 Alexander Borisov
  
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -18,17 +18,17 @@
  Author: lex.borisov@gmail.com (Alexander Borisov)
 */
 
-#include <myhtml/encoding.h>
+#include <myencoding/encoding.h>
 
-#ifndef MyHTML_ENCODING_RESOURCE_H
-#define MyHTML_ENCODING_RESOURCE_H
+#ifndef MyENCODING_RESOURCE_H
+#define MyENCODING_RESOURCE_H
 #pragma once
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-static const unsigned long myhtml_encoding_map_big5[] = {
+static const unsigned long myencoding_map_big5[] = {
 	0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
 	0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
 	0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
@@ -2010,7 +2010,7 @@ static const unsigned long myhtml_encoding_map_big5[] = {
 	168205, 31188, 
 };
 
-static const unsigned long myhtml_encoding_map_euc_kr[] = {
+static const unsigned long myencoding_map_euc_kr[] = {
 	44034, 44035, 44037, 44038, 44043, 44044, 44045, 44046, 44047, 44056, 
 	44062, 44063, 44065, 44066, 44067, 44069, 44070, 44071, 44072, 44073, 
 	44074, 44075, 44078, 44082, 44083, 44084, 0x0000, 0x0000, 0x0000, 0x0000, 
@@ -4408,7 +4408,7 @@ static const unsigned long myhtml_encoding_map_euc_kr[] = {
 
 };
 
-static const unsigned long myhtml_encoding_map_gb18030[] = {
+static const unsigned long myencoding_map_gb18030[] = {
 	19970, 19972, 19973, 19974, 19983, 19986, 19991, 19999, 20000, 20001, 
 	20003, 20006, 20009, 20014, 20015, 20017, 20019, 20021, 20023, 20028, 
 	20032, 20033, 20034, 20036, 20038, 20042, 20049, 20053, 20055, 20058, 
@@ -6806,7 +6806,7 @@ static const unsigned long myhtml_encoding_map_gb18030[] = {
 
 };
 
-static const unsigned long myhtml_encoding_map_gb18030_ranges[][2] = {
+static const unsigned long myencoding_map_gb18030_ranges[][2] = {
 	{0, 128}, {36, 165}, {38, 169}, {45, 178}, {50, 184}, 
 	{81, 216}, {89, 226}, {95, 235}, {96, 238}, {100, 244}, 
 	{103, 248}, {104, 251}, {105, 253}, {109, 258}, {126, 276}, 
@@ -6851,7 +6851,7 @@ static const unsigned long myhtml_encoding_map_gb18030_ranges[][2] = {
 	{39394, 65510}, {189000, 65536}, 
 };
 
-static const unsigned long myhtml_encoding_map_ibm866[] = {
+static const unsigned long myencoding_map_ibm866[] = {
 	1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 
 	1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059, 
 	1060, 1061, 1062, 1063, 1064, 1065, 1066, 1067, 1068, 1069, 
@@ -6867,7 +6867,7 @@ static const unsigned long myhtml_encoding_map_ibm866[] = {
 	176, 8729, 183, 8730, 8470, 164, 9632, 160, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_10[] = {
+static const unsigned long myencoding_map_iso_8859_10[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -6883,7 +6883,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_10[] = {
 	248, 371, 250, 251, 252, 253, 254, 312, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_13[] = {
+static const unsigned long myencoding_map_iso_8859_13[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -6899,7 +6899,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_13[] = {
 	371, 322, 347, 363, 252, 380, 382, 8217, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_14[] = {
+static const unsigned long myencoding_map_iso_8859_14[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -6915,7 +6915,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_14[] = {
 	248, 249, 250, 251, 252, 253, 375, 255, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_15[] = {
+static const unsigned long myencoding_map_iso_8859_15[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -6931,7 +6931,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_15[] = {
 	248, 249, 250, 251, 252, 253, 254, 255, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_16[] = {
+static const unsigned long myencoding_map_iso_8859_16[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -6947,7 +6947,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_16[] = {
 	369, 249, 250, 251, 252, 281, 539, 255, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_2[] = {
+static const unsigned long myencoding_map_iso_8859_2[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -6963,7 +6963,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_2[] = {
 	345, 367, 250, 369, 252, 253, 355, 729, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_3[] = {
+static const unsigned long myencoding_map_iso_8859_3[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -6979,7 +6979,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_3[] = {
 	285, 249, 250, 251, 252, 365, 349, 729, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_4[] = {
+static const unsigned long myencoding_map_iso_8859_4[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -6995,7 +6995,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_4[] = {
 	248, 371, 250, 251, 252, 361, 363, 729, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_5[] = {
+static const unsigned long myencoding_map_iso_8859_5[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -7011,7 +7011,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_5[] = {
 	1112, 1113, 1114, 1115, 1116, 167, 1118, 1119, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_6[] = {
+static const unsigned long myencoding_map_iso_8859_6[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -7027,7 +7027,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_6[] = {
 	0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_7[] = {
+static const unsigned long myencoding_map_iso_8859_7[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -7043,7 +7043,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_7[] = {
 	968, 969, 970, 971, 972, 973, 974, 0x0000, 
 };
 
-static const unsigned long myhtml_encoding_map_iso_8859_8[] = {
+static const unsigned long myencoding_map_iso_8859_8[] = {
 	128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
 	148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 
@@ -7059,7 +7059,7 @@ static const unsigned long myhtml_encoding_map_iso_8859_8[] = {
 	1512, 1513, 1514, 0x0000, 0x0000, 8206, 8207, 0x0000, 
 };
 
-static const unsigned long myhtml_encoding_map_jis0208[] = {
+static const unsigned long myencoding_map_jis0208[] = {
 	12288, 12289, 12290, 65292, 65294, 12539, 65306, 65307, 65311, 65281, 
 	12443, 12444, 180, 65344, 168, 65342, 65507, 65343, 12541, 12542, 
 	12445, 12446, 12291, 20189, 12293, 12294, 12295, 12540, 8213, 8208, 
@@ -8191,7 +8191,7 @@ static const unsigned long myhtml_encoding_map_jis0208[] = {
 
 };
 
-static const unsigned long myhtml_encoding_map_jis0212[] = {
+static const unsigned long myencoding_map_jis0212[] = {
 	0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
 	0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
 	0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
@@ -9078,7 +9078,7 @@ static const unsigned long myhtml_encoding_map_jis0212[] = {
 	0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
 };
 
-static const unsigned long myhtml_encoding_map_koi8_r[] = {
+static const unsigned long myencoding_map_koi8_r[] = {
 	9472, 9474, 9484, 9488, 9492, 9496, 9500, 9508, 9516, 9524, 
 	9532, 9600, 9604, 9608, 9612, 9616, 9617, 9618, 9619, 8992, 
 	9632, 8729, 8730, 8776, 8804, 8805, 160, 8993, 176, 178, 
@@ -9094,7 +9094,7 @@ static const unsigned long myhtml_encoding_map_koi8_r[] = {
 	1068, 1067, 1047, 1064, 1069, 1065, 1063, 1066, 
 };
 
-static const unsigned long myhtml_encoding_map_koi8_u[] = {
+static const unsigned long myencoding_map_koi8_u[] = {
 	9472, 9474, 9484, 9488, 9492, 9496, 9500, 9508, 9516, 9524, 
 	9532, 9600, 9604, 9608, 9612, 9616, 9617, 9618, 9619, 8992, 
 	9632, 8729, 8730, 8776, 8804, 8805, 160, 8993, 176, 178, 
@@ -9110,7 +9110,7 @@ static const unsigned long myhtml_encoding_map_koi8_u[] = {
 	1068, 1067, 1047, 1064, 1069, 1065, 1063, 1066, 
 };
 
-static const unsigned long myhtml_encoding_map_macintosh[] = {
+static const unsigned long myencoding_map_macintosh[] = {
 	196, 197, 199, 201, 209, 214, 220, 225, 224, 226, 
 	228, 227, 229, 231, 233, 232, 234, 235, 237, 236, 
 	238, 239, 241, 243, 242, 244, 246, 245, 250, 249, 
@@ -9126,7 +9126,7 @@ static const unsigned long myhtml_encoding_map_macintosh[] = {
 	175, 728, 729, 730, 184, 733, 731, 711, 
 };
 
-static const unsigned long myhtml_encoding_map_windows_1250[] = {
+static const unsigned long myencoding_map_windows_1250[] = {
 	8364, 129, 8218, 131, 8222, 8230, 8224, 8225, 136, 8240, 
 	352, 8249, 346, 356, 381, 377, 144, 8216, 8217, 8220, 
 	8221, 8226, 8211, 8212, 152, 8482, 353, 8250, 347, 357, 
@@ -9142,7 +9142,7 @@ static const unsigned long myhtml_encoding_map_windows_1250[] = {
 	345, 367, 250, 369, 252, 253, 355, 729, 
 };
 
-static const unsigned long myhtml_encoding_map_windows_1251[] = {
+static const unsigned long myencoding_map_windows_1251[] = {
 	1026, 1027, 8218, 1107, 8222, 8230, 8224, 8225, 8364, 8240, 
 	1033, 8249, 1034, 1036, 1035, 1039, 1106, 8216, 8217, 8220, 
 	8221, 8226, 8211, 8212, 152, 8482, 1113, 8250, 1114, 1116, 
@@ -9158,7 +9158,7 @@ static const unsigned long myhtml_encoding_map_windows_1251[] = {
 	1096, 1097, 1098, 1099, 1100, 1101, 1102, 1103, 
 };
 
-static const unsigned long myhtml_encoding_map_windows_1252[] = {
+static const unsigned long myencoding_map_windows_1252[] = {
 	8364, 129, 8218, 402, 8222, 8230, 8224, 8225, 710, 8240, 
 	352, 8249, 338, 141, 381, 143, 144, 8216, 8217, 8220, 
 	8221, 8226, 8211, 8212, 732, 8482, 353, 8250, 339, 157, 
@@ -9174,7 +9174,7 @@ static const unsigned long myhtml_encoding_map_windows_1252[] = {
 	248, 249, 250, 251, 252, 253, 254, 255, 
 };
 
-static const unsigned long myhtml_encoding_map_windows_1253[] = {
+static const unsigned long myencoding_map_windows_1253[] = {
 	8364, 129, 8218, 402, 8222, 8230, 8224, 8225, 136, 8240, 
 	138, 8249, 140, 141, 142, 143, 144, 8216, 8217, 8220, 
 	8221, 8226, 8211, 8212, 152, 8482, 154, 8250, 156, 157, 
@@ -9190,7 +9190,7 @@ static const unsigned long myhtml_encoding_map_windows_1253[] = {
 	968, 969, 970, 971, 972, 973, 974, 0x0000, 
 };
 
-static const unsigned long myhtml_encoding_map_windows_1254[] = {
+static const unsigned long myencoding_map_windows_1254[] = {
 	8364, 129, 8218, 402, 8222, 8230, 8224, 8225, 710, 8240, 
 	352, 8249, 338, 141, 142, 143, 144, 8216, 8217, 8220, 
 	8221, 8226, 8211, 8212, 732, 8482, 353, 8250, 339, 157, 
@@ -9206,7 +9206,7 @@ static const unsigned long myhtml_encoding_map_windows_1254[] = {
 	248, 249, 250, 251, 252, 305, 351, 255, 
 };
 
-static const unsigned long myhtml_encoding_map_windows_1255[] = {
+static const unsigned long myencoding_map_windows_1255[] = {
 	8364, 129, 8218, 402, 8222, 8230, 8224, 8225, 710, 8240, 
 	138, 8249, 140, 141, 142, 143, 144, 8216, 8217, 8220, 
 	8221, 8226, 8211, 8212, 732, 8482, 154, 8250, 156, 157, 
@@ -9222,7 +9222,7 @@ static const unsigned long myhtml_encoding_map_windows_1255[] = {
 	1512, 1513, 1514, 0x0000, 0x0000, 8206, 8207, 0x0000, 
 };
 
-static const unsigned long myhtml_encoding_map_windows_1256[] = {
+static const unsigned long myencoding_map_windows_1256[] = {
 	8364, 1662, 8218, 402, 8222, 8230, 8224, 8225, 710, 8240, 
 	1657, 8249, 338, 1670, 1688, 1672, 1711, 8216, 8217, 8220, 
 	8221, 8226, 8211, 8212, 1705, 8482, 1681, 8250, 339, 8204, 
@@ -9238,7 +9238,7 @@ static const unsigned long myhtml_encoding_map_windows_1256[] = {
 	1617, 249, 1618, 251, 252, 8206, 8207, 1746, 
 };
 
-static const unsigned long myhtml_encoding_map_windows_1257[] = {
+static const unsigned long myencoding_map_windows_1257[] = {
 	8364, 129, 8218, 131, 8222, 8230, 8224, 8225, 136, 8240, 
 	138, 8249, 140, 168, 711, 184, 144, 8216, 8217, 8220, 
 	8221, 8226, 8211, 8212, 152, 8482, 154, 8250, 156, 175, 
@@ -9254,7 +9254,7 @@ static const unsigned long myhtml_encoding_map_windows_1257[] = {
 	371, 322, 347, 363, 252, 380, 382, 729, 
 };
 
-static const unsigned long myhtml_encoding_map_windows_1258[] = {
+static const unsigned long myencoding_map_windows_1258[] = {
 	8364, 129, 8218, 402, 8222, 8230, 8224, 8225, 710, 8240, 
 	138, 8249, 338, 141, 142, 143, 144, 8216, 8217, 8220, 
 	8221, 8226, 8211, 8212, 732, 8482, 154, 8250, 339, 157, 
@@ -9270,7 +9270,7 @@ static const unsigned long myhtml_encoding_map_windows_1258[] = {
 	248, 249, 250, 251, 252, 432, 8363, 255, 
 };
 
-static const unsigned long myhtml_encoding_map_windows_874[] = {
+static const unsigned long myencoding_map_windows_874[] = {
 	8364, 129, 130, 131, 132, 8230, 134, 135, 136, 137, 
 	138, 139, 140, 141, 142, 143, 144, 8216, 8217, 8220, 
 	8221, 8226, 8211, 8212, 152, 153, 154, 155, 156, 157, 
@@ -9286,7 +9286,7 @@ static const unsigned long myhtml_encoding_map_windows_874[] = {
 	3672, 3673, 3674, 3675, 0x0000, 0x0000, 0x0000, 0x0000, 
 };
 
-static const unsigned long myhtml_encoding_map_x_mac_cyrillic[] = {
+static const unsigned long myencoding_map_x_mac_cyrillic[] = {
 	1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 
 	1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059, 
 	1060, 1061, 1062, 1063, 1064, 1065, 1066, 1067, 1068, 1069, 
@@ -9302,28 +9302,75 @@ static const unsigned long myhtml_encoding_map_x_mac_cyrillic[] = {
 	1096, 1097, 1098, 1099, 1100, 1101, 1102, 8364, 
 };
 
-static const myhtml_encoding_custom_f myhtml_encoding_function_index[] = {
-    myhtml_encoding_decode_utf_8, NULL, NULL, myhtml_encoding_decode_utf_8, myhtml_encoding_decode_utf_16le,
-    myhtml_encoding_decode_utf_16be, myhtml_encoding_decode_x_user_defined,
-    myhtml_encoding_decode_big5, myhtml_encoding_decode_euc_kr, myhtml_encoding_decode_gb18030,
-    myhtml_encoding_decode_ibm866, myhtml_encoding_decode_iso_8859_10, myhtml_encoding_decode_iso_8859_13,
-    myhtml_encoding_decode_iso_8859_14, myhtml_encoding_decode_iso_8859_15, myhtml_encoding_decode_iso_8859_16,
-    myhtml_encoding_decode_iso_8859_2, myhtml_encoding_decode_iso_8859_3, myhtml_encoding_decode_iso_8859_4,
-    myhtml_encoding_decode_iso_8859_5, myhtml_encoding_decode_iso_8859_6, myhtml_encoding_decode_iso_8859_7,
-    myhtml_encoding_decode_iso_8859_8, myhtml_encoding_decode_koi8_r, myhtml_encoding_decode_koi8_u,
-    myhtml_encoding_decode_macintosh, myhtml_encoding_decode_windows_1250, myhtml_encoding_decode_windows_1251,
-    myhtml_encoding_decode_windows_1252, myhtml_encoding_decode_windows_1253, myhtml_encoding_decode_windows_1254,
-    myhtml_encoding_decode_windows_1255, myhtml_encoding_decode_windows_1256, myhtml_encoding_decode_windows_1257,
-    myhtml_encoding_decode_windows_1258, myhtml_encoding_decode_windows_874, myhtml_encoding_decode_x_mac_cyrillic,
-    myhtml_encoding_decode_iso_2022_jp, myhtml_encoding_decode_gbk, myhtml_encoding_decode_shift_jis,
-    myhtml_encoding_decode_euc_jp, myhtml_encoding_decode_iso_8859_8_i
+//static const myencoding_custom_f myencoding_function_index[] = {
+//    myencoding_decode_utf_8, NULL, NULL, myencoding_decode_utf_8, myencoding_decode_utf_16le,
+//    myencoding_decode_utf_16be, myencoding_decode_x_user_defined,
+//    myencoding_decode_big5, myencoding_decode_euc_kr, myencoding_decode_gb18030,
+//    myencoding_decode_ibm866, myencoding_decode_iso_8859_10, myencoding_decode_iso_8859_13,
+//    myencoding_decode_iso_8859_14, myencoding_decode_iso_8859_15, myencoding_decode_iso_8859_16,
+//    myencoding_decode_iso_8859_2, myencoding_decode_iso_8859_3, myencoding_decode_iso_8859_4,
+//    myencoding_decode_iso_8859_5, myencoding_decode_iso_8859_6, myencoding_decode_iso_8859_7,
+//    myencoding_decode_iso_8859_8, myencoding_decode_koi8_r, myencoding_decode_koi8_u,
+//    myencoding_decode_macintosh, myencoding_decode_windows_1250, myencoding_decode_windows_1251,
+//    myencoding_decode_windows_1252, myencoding_decode_windows_1253, myencoding_decode_windows_1254,
+//    myencoding_decode_windows_1255, myencoding_decode_windows_1256, myencoding_decode_windows_1257,
+//    myencoding_decode_windows_1258, myencoding_decode_windows_874, myencoding_decode_x_mac_cyrillic,
+//    myencoding_decode_iso_2022_jp, myencoding_decode_gbk, myencoding_decode_shift_jis,
+//    myencoding_decode_euc_jp, myencoding_decode_iso_8859_8_i
+//};
+
+static const myencoding_custom_f myencoding_function_index[] =
+{
+    myencoding_decode_utf_8,	        // MyENCODING_DEFAULT
+    NULL,
+    NULL,
+    myencoding_decode_utf_8,	        // MyENCODING_UTF_8
+    myencoding_decode_utf_16le,	    // MyENCODING_UTF_16LE
+    myencoding_decode_utf_16be,	    // MyENCODING_UTF_16BE
+    myencoding_decode_x_user_defined,	// MyENCODING_X_USER_DEFINED
+    myencoding_decode_big5,	        // MyENCODING_BIG5
+    myencoding_decode_euc_jp,	        // MyENCODING_EUC_JP
+    myencoding_decode_euc_kr,	        // MyENCODING_EUC_KR
+    myencoding_decode_gb18030,	        // MyENCODING_GB18030
+    myencoding_decode_gbk,	            // MyENCODING_GBK
+    myencoding_decode_ibm866,	        // MyENCODING_IBM866
+    myencoding_decode_iso_2022_jp,	    // MyENCODING_ISO_2022_JP
+    myencoding_decode_iso_8859_10,	    // MyENCODING_ISO_8859_10
+    myencoding_decode_iso_8859_13,	    // MyENCODING_ISO_8859_13
+    myencoding_decode_iso_8859_14,	    // MyENCODING_ISO_8859_14
+    myencoding_decode_iso_8859_15,	    // MyENCODING_ISO_8859_15
+    myencoding_decode_iso_8859_16,	    // MyENCODING_ISO_8859_16
+    myencoding_decode_iso_8859_2,	    // MyENCODING_ISO_8859_2
+    myencoding_decode_iso_8859_3,	    // MyENCODING_ISO_8859_3
+    myencoding_decode_iso_8859_4,	    // MyENCODING_ISO_8859_4
+    myencoding_decode_iso_8859_5,	    // MyENCODING_ISO_8859_5
+    myencoding_decode_iso_8859_6,	    // MyENCODING_ISO_8859_6
+    myencoding_decode_iso_8859_7,	    // MyENCODING_ISO_8859_7
+    myencoding_decode_iso_8859_8,	    // MyENCODING_ISO_8859_8
+    myencoding_decode_iso_8859_8_i,	// MyENCODING_ISO_8859_8_I
+    myencoding_decode_koi8_r,	        // MyENCODING_KOI8_R
+    myencoding_decode_koi8_u,	        // MyENCODING_KOI8_U
+    myencoding_decode_macintosh,	    // MyENCODING_MACINTOSH
+    myencoding_decode_shift_jis,	    // MyENCODING_SHIFT_JIS
+    myencoding_decode_windows_1250,	// MyENCODING_WINDOWS_1250
+    myencoding_decode_windows_1251,	// MyENCODING_WINDOWS_1251
+    myencoding_decode_windows_1252,	// MyENCODING_WINDOWS_1252
+    myencoding_decode_windows_1253,	// MyENCODING_WINDOWS_1253
+    myencoding_decode_windows_1254,	// MyENCODING_WINDOWS_1254
+    myencoding_decode_windows_1255,	// MyENCODING_WINDOWS_1255
+    myencoding_decode_windows_1256,	// MyENCODING_WINDOWS_1256
+    myencoding_decode_windows_1257,	// MyENCODING_WINDOWS_1257
+    myencoding_decode_windows_1258,	// MyENCODING_WINDOWS_1258
+    myencoding_decode_windows_874,	    // MyENCODING_WINDOWS_874
+    myencoding_decode_x_mac_cyrillic,	// MyENCODING_X_MAC_CYRILLIC
+    NULL,
 };
 
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
 
-#endif /* MyHTML_ENCODING_RESOURCE_H */
+#endif /* MyENCODING_RESOURCE_H */
 
 
 
